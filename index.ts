@@ -1,3 +1,27 @@
+/**
+InventoryCategory
+├── title: "Electronics"
+├── items: [  // Directly associated items with InventoryCategory
+│   ├── { name: "Smartphone" }
+│   └── { name: "Tablet" }
+├── subCategories: [  // Subcategories related to InventoryCategory
+│   ├── InventorySubCategory
+│   │   ├── title: "Laptops"
+│   │   ├── parent: "InventoryCategory" (ref to Electronics)
+│   │   └── items: [  // Items related to this SubCategory
+│   │       ├── { name: "MacBook Pro" }
+│   │       └── { name: "Dell XPS" }
+│   │   ]
+│   └── InventorySubCategory
+│       ├── title: "Smartphones"
+│       ├── parent: "InventoryCategory" (ref to Electronics)
+│       └── items: [
+│           ├── { name: "iPhone 14" }
+│           └── { name: "Samsung Galaxy S23" }
+│       ]
+└── ]
+*/
+
 import mongoose from "mongoose";
 mongoose.connect("mongodb://127.0.0.1:27017/polymorphic").then(() => {
   console.log("connected");
