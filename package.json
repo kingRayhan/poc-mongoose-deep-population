@@ -1,0 +1,16 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx index.ts"
+  },
+  "keywords": [],
+  "author": "kingrayhan",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mongoose": "^8.6.1",
+    "tsx": "^4.19.0"
+  }
+}
